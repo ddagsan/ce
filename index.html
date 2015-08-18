@@ -4,14 +4,14 @@
     <title></title>
     <style>
         body{
-            width:200px; 
-            height:200px; 
+            width:500px;
+            height:500px;
             background-color:#ffc8c8;
         }
 
         .view-animate-container {
             position: relative;
-            height: 100px !important;
+            height: 400px !important;
             background: white;
             height: 40px;
             overflow: hidden;
@@ -21,8 +21,8 @@
         }
 
             .view-animate.ng-enter, .view-animate.ng-leave {
-                -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.4s;
-                transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.4s;
+                -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+                transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
                 display: block;
                 width: 100%;
                 position: absolute;
@@ -40,6 +40,10 @@
                     left: 0;
                 }
 
+            .view-animate.ng-leave {
+                left: 0;
+            }
+            
             .view-animate.ng-leave.ng-leave-active {
                 left: -100%;
             }
@@ -57,6 +61,9 @@
     <script src="app/js/angular.js"></script>
     <script src="app/js/angular-route.js"></script>
     <script src="app/js/angular-animate.js"></script>
+    <script src="app/directives/common.js"></script>
+    <script src="app/js/md5.js"></script>
+    <script src="app/js/commonFunctions.js"></script>
     <!--begin controllers-->
     <script src="app/controllers/index.js"></script>
     <!--end controllers-->
